@@ -3,9 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
     <title>Week 10 coding assignment</title>
 </head>
 <body>
-    
+   <div class ="container text-center">
+        <div class ="row">
+            <div class = "col">
+                <h1 class ="display-1">Super Hero Table</h1>
+            </div>
+        </div>
+   </div>
+
+   <div class ="container text-center pt-5">
+        <div class ="row">
+            <div class = "col">
+                <p>Let's add some Super Heros to our table:</p>
+            </div>
+        
+        </div>
+    </div>
+    <div class ="container pt-5">    
+        <div class = "row justify-content-center">
+            <div class = "col-8">
+                <form class="row g-3">
+                    <div class="col-md-6">
+                      <label for="inputName" class="form-label">Super Hero Name</label>
+                      <input type="text" class="form-control" id="inputName" placeholder="Batman">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputAlias" class="form-label">Alias</label>
+                      <input type="text" class="form-control" id="inputAlias" placeholder="Bruce Wayne">
+                    </div>
+                    <div class="col-12">
+                      <label for="inputCity" class="form-label">City</label>
+                      <input type="text" class="form-control" id="inputCity" placeholder="Gotham">
+                    </div>
+                    <div class="col-12">
+                      <label for="inputUniverse" class="form-label">Universe</label>
+                      <input type="text" class="form-control" id="inputUniverse" placeholder="DC, Marvel, etc">
+                    </div>
+                    
+                    
+                    
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="checkFav">
+                        <label class="form-check-label" for="checkFav">
+                          Favorite?
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary" onclick="addToTable(event)">Add to Table</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+
+    <div class = "container pt-5">
+        <div class ="row justify-content-center">
+            <div class ="col-8">
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Super Hero</th>
+                        <th scope="col">Alias</th>
+                        <th scope="col">City</th>
+                        <th scope="col">Universe</th>
+                        <th scope="col">Favorite</th>
+                      </tr>
+                    </thead>
+                    <tbody id="heroTable">
+                      <tr>
+                        <td>Batman</td>
+                        <td>Bruce</td>
+                        <td>Wayne</td>
+                        <td>DC</td>
+                        <td><span class="badge rounded-pill text-bg-success">Favorite</span> </td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
