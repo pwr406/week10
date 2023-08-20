@@ -1,0 +1,21 @@
+/* set body background to have an image - cover the whole area and not repeat */
+body {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* styling for transparent-container class - set color and alpha to give transparent look. Position relative to push it behind the container class. Margin auto to have it centered,
+max width to have it only be in the center of the body rather than the whole screen. */
+.transparent-container {
+background-color: rgba(196, 184, 184, 0.9);
+ position: relative;
+ margin: auto;
+ max-width: 800px;
+}
+
+/* styling for container to have it rest on top of transparent-container. */
+.container {
+    position: relative;
+    z-index: 2;
+    
+}

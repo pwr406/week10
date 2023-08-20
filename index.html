@@ -7,30 +7,39 @@
       rel="stylesheet"
       href="./node_modules/bootstrap/dist/css/bootstrap.css"
     />
+    <link rel="stylesheet" href="styles.css">
     <title>Week 10 coding assignment</title>
 </head>
+
 <body>
-   <div class ="container text-center">
+<!-- div to have a semi-transparent container behind the text, form and table -->
+<div class ="transparent-container" > 
+    <!-- container div to center the text -->
+    <div class ="container text-center">
         <div class ="row">
             <div class = "col">
                 <h1 class ="display-1">Super Hero Table</h1>
             </div>
         </div>
    </div>
-
+    <!-- container to center text, padding of 5 on top  -->
    <div class ="container text-center pt-5">
         <div class ="row">
             <div class = "col">
                 <p>Let's add some Super Heros to our table:</p>
             </div>
-        
         </div>
     </div>
+    <!-- container with 5 padding on top -->
     <div class ="container pt-5">    
+        <!-- row to justify all the content within -->
         <div class = "row justify-content-center">
+            <!-- column to take up 8 of the spots -->
             <div class = "col-8">
+                <!-- row nested within col to start building the form -->
                 <form class="row g-3">
                     <div class="col-md-6">
+                        <!-- inputs for the form -->
                       <label for="inputName" class="form-label">Super Hero Name</label>
                       <input type="text" class="form-control" id="inputName" placeholder="Batman">
                     </div>
@@ -46,25 +55,21 @@
                       <label for="inputUniverse" class="form-label">Universe</label>
                       <input type="text" class="form-control" id="inputUniverse" placeholder="DC, Marvel, etc">
                     </div>
-                    
-                    
-                    
                     <div class="col-12">
                       <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="checkFav">
-                        <label class="form-check-label" for="checkFav">
-                          Favorite?
-                        </label>
+                        <label class="form-check-label" for="checkFav">Favorite?</label>
                       </div>
                     </div>
                     <div class="col-12">
+                        <!-- submit button with onclick set to function we created in .js file to add it to the table -->
                       <button type="submit" class="btn btn-primary" onclick="addToTable(event)">Add to Table</button>
                     </div>
                   </form>
             </div>
         </div>
     </div>
-
+    <!-- Table to store data -->
     <div class = "container pt-5">
         <div class ="row justify-content-center">
             <div class ="col-8">
@@ -76,6 +81,7 @@
                         <th scope="col">City</th>
                         <th scope="col">Universe</th>
                         <th scope="col">Favorite</th>
+                        <th scope=""col></th>
                       </tr>
                     </thead>
                     <tbody id="heroTable">
@@ -85,6 +91,7 @@
                         <td>Wayne</td>
                         <td>DC</td>
                         <td><span class="badge rounded-pill text-bg-success">Favorite</span> </td>
+                        <td></td>
                       </tr>
                       
                     </tbody>
@@ -93,5 +100,6 @@
         </div>
     </div>
     <script src="script.js"></script>
+ </div> 
 </body>
 </html>
